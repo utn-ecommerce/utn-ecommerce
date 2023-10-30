@@ -3,6 +3,36 @@ body {
   margin: 0;
   padding: 0; 
 }
+@media (max-width: 768px) {
+
+#product-list {
+  flex-direction: column; /* Cambiar la dirección de los elementos a una columna */
+  align-items: center; /* Centrar los elementos horizontalmente */
+}
+
+#servicio-id {
+  flex-direction: column; /* Cambiar la dirección de los elementos a una columna */
+  align-items: center; /* Centrar los elementos horizontalmente */
+}
+
+.product {
+  width: 100%; /* Ancho completo en pantallas más pequeñas */
+  margin-right: 0; /* Eliminar el margen derecho en pantallas más pequeñas */
+}
+
+.services-list {
+  width: 100%; /* Ancho completo en pantallas más pequeñas */
+  margin-right: 0; /* Eliminar el margen derecho en pantallas más pequeñas */
+}
+.carousel-container img {
+  width: 100%; /* Hacer que la imagen ocupe el ancho completo del contenedor */
+  height: auto; /* Mantener la proporción original de la imagen */
+  max-width: 100%; /* Evitar que la imagen se desborde del contenedor */
+}
+
+}
+
+
 .bg-pastel-crema {
   background-color: #faeac9; /* Color pastel crema */
 }
@@ -120,3 +150,30 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 1px;
  }
+
+ /*==========================
+   Servicios a ofrecer
+ ============================ */
+
+ #servicio-id {
+  margin-top: 20px; 
+  display: flex;
+  justify-content: center; 
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
+}
+
+.services-list {
+  width: 280px; 
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-right: 20px; 
+  padding: 20px;
+  margin-bottom: 20px; 
+}
+
+
+.services-list img {
+  max-width: 100%;
+  height: auto;
+}
