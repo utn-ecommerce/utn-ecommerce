@@ -1,122 +1,25 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0; 
+h2, h3, a, p {
+  font-family: 'Playfair Display', serif;
 }
+
 .bg-pastel-crema {
-  background-color: #faeac9; /* Color pastel crema */
+  background-color: #faeac9;
 }
 
-#product-list {
-  margin-top: 20px; 
-  display: flex;
-  justify-content: center; 
-  flex-wrap: nowrap; 
-  overflow-x: auto; 
+.card-img-top {
+  height: 200px; 
+  object-fit: cover; 
 }
 
-.product {
-  width: 280px; 
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin-right: 20px; 
-  padding: 20px;
-  margin-bottom: 20px; 
-}
-
-
-.product img {
-  max-width: 100%;
+.contact-image {
+  display: block;
+  margin: 30px auto;
+  max-width: 80%; 
   height: auto;
+  opacity: 1;
+  transition: opacity 0.3s; 
 }
 
-
-.btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  display: block; 
-  width: 100%;
-  margin-top: 10px; 
+.contact-image:hover {
+  opacity: 0.8; 
 }
-
-
-#carousel {
-  margin-bottom: 20px; 
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-container {
-  display: flex;
-  transition: transform 0.5s;
-  width: 300%;
-}
-
-.carousel-container img {
-  width: 33.33%;
-  max-width: 33.33%;
-}
-
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  cursor: pointer;
-  color: #007bff;
-  background-color: #fff;
-  border: 1px solid #007bff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left {
-  left: 0;
-}
-
-.right {
-  right: 0;
-}
-
-.carousel-arrow:hover {
-  background-color: #007bff;
-  color: #fff;
-}
-/*===========================
-  Titulo de servicios
-============================ */
-.services {
-	padding:25px 0 80px 0;
-}
-
-.services .text-center h2 {
-	font-weight:300;
-	text-transform:uppercase;
-	text-shadow:none;
-	margin-bottom:50px;
-	font-size:24px;
-}
-
-.services i {
-	margin-top:20px;
-	margin-bottom:10px;
-	font-size:50px;
-	color:#ddd;
-}
-
-.services h3 {
-	margin-bottom:20px;
-	font-size: 16px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1px;
- }
