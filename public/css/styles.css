@@ -10,6 +10,10 @@ h2, h3, a, p {
   height: 200px; 
   object-fit: cover; 
 }
+.custom-card {
+  height: 500px; /* Ajusta la altura según tus necesidades */
+}
+
 
 .contact-image {
   display: block;
