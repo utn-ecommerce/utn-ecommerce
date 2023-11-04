@@ -10,11 +10,17 @@ h2, h3, a, p {
   height: 200px; 
   object-fit: cover; 
 }
+/* CSS personalizado */
 .custom-card {
-  height: 500px; /* Ajusta la altura según tus necesidades */
+  width: 400px; /* Ancho deseado */
+  height: 550px; /* Alto deseado */
 }
-
-
+/* CSS personalizado */
+.custom-card-image {
+  width: 100%; /* Ancho deseado */
+  height: 100%; /* Alto deseado */
+  object-fit: cover; /* Para asegurarte de que la imagen se ajuste al contenedor sin deformarse */
+}
 .contact-image {
   display: block;
   margin: 30px auto;

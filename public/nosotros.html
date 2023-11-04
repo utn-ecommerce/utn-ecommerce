@@ -12,28 +12,39 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-pastel-crema">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Perricentro-Spa</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg bg-pastel-crema">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../public/index.html">Perricentro-Spa</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="../public/index.html">Productos</a>
-              <a class="nav-link" href="../public/servicio.html">Servicios</a>
-              <a class="nav-link" href="../public/nosotros.html">Nosotros</a>
-              <a class="nav-link" href="#">Carrito</a>
+                <a class="nav-link active" aria-current="page" href="../public/index.html">Productos</a>
+                <a class="nav-link" href="../public/servicio.html">Servicios</a>
+                <a class="nav-link" href="../public/nosotros.html">Nosotros</a>
+                <a class="nav-link" href="../public/contacto.html">Contacto</a>
+                <a class="nav-link" href="../public/carrito.html">Carrito</a>
             </div>
-          </div>
         </div>
-      </nav>
-      <h3>CONOCÉ A NUESTRO EQUIPO DE PROFESIONALES</h3>
+        <form class="d-flex">
+            <button class="btn btn-outline-dark ver-carrito-btn" type="button" data-bs-toggle="modal" data-bs-target="#carrito-modal">
+                <i class="bi-cart-fill me-1"></i>
+                Carrito
+                <span class="badge bg-dark text-white ms-1 rounded-pill" id="contador-carrito">0</span>
+            </button>
+            
+        </form>
+    </div>
+</nav>
+      <h3 class="text-center mt-4" style="color: #007BFF; font-size: 28px; font-weight: bold;">CONOCÉ A NUESTRO EQUIPO DE PROFESIONALES</h3>
+
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100 custom-card">
-                <img src="https://uvp.mx/uvpblog/wp-content/uploads/2020/05/Allied-Health-scaled-1024x683.jpeg" class="card-img-top" alt="Fisioterapeuta" style="max-width: 100%; max-height: 100%;">
+                <img src="../media/nosotros1_1_1.jpeg" class="card-img-top custom-card-image" alt="Fisioterapeuta" style="max-width: 100%; max-height: 100%;">
                 <div class="card-body">
                     <h5 class="card-title">Javier Lucera</h5>
                     <p class="card-text">Fisioterapeuta. Experto en contracturas musculares.
@@ -41,13 +52,13 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-body-secondary">Reserva ya tu sesión!</small>
+                  <a href="../public/contacto.html" class="btn btn-primary">Reserva ya tu sesión</a>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card h-100 custom-card">
-                <img src="https://masajistaspremium.com/wp-content/uploads/2022/10/masajistas.jpg" class="card-img-top" alt="..." style="max-width: 100%; max-height: 100%;">
+                <img src="../media/nosotros3_1.jpg" class="card-img-top custom-card-image" alt="..." style="max-width: 100%; max-height: 100%;">
                 <div class="card-body">
                     <h5 class="card-title">Marisa Ezquivel</h5>
                     <p class="card-text">Masajista Profesional
@@ -55,13 +66,13 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-body-secondary">Reserva ya tu sesión!</small>
+                  <a href="../public/contacto.html" class="btn btn-primary">Reserva ya tu sesión</a>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card h-100 custom-card">
-                <img src="https://masajistaspremium.com/wp-content/uploads/2022/11/masajista-terapeutica-en-flores.jpeg" class="card-img-top" alt="..." style="max-width: 100%; max-height: 100%;">
+                <img src="../media/nosotros2.3.jpeg" class="card-img-top custom-card-image" alt="..." style="max-width: 100%; max-height: 100%;">
                 <div class="card-body">
                     <h5 class="card-title">Carla Enriquez</h5>
                     <p class="card-text">Experta en Estética y Cuidado de la Piel.
@@ -70,12 +81,11 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-body-secondary">Reserva ya tu sesión!</small>
+                  <a href="../public/contacto.html" class="btn btn-primary">Reserva ya tu sesión</a>
                 </div>
             </div>
         </div>
     </div>
     
 </body>
-<h3>en proceso....</h3>
 </html>
