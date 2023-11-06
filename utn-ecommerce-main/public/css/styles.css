@@ -1,0 +1,35 @@
+h2, h3, a, p {
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-pastel-crema {
+  background-color: #faeac9;
+}
+
+.card-img-top {
+  height: 200px; 
+  object-fit: cover; 
+}
+/* CSS personalizado */
+.custom-card {
+  width: 400px; /* Ancho deseado */
+  height: 550px; /* Alto deseado */
+}
+/* CSS personalizado */
+.custom-card-image {
+  width: 100%; /* Ancho deseado */
+  height: 100%; /* Alto deseado */
+  object-fit: cover; /* Para asegurarte de que la imagen se ajuste al contenedor sin deformarse */
+}
+.contact-image {
+  display: block;
+  margin: 30px auto;
+  max-width: 80%; 
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.3s; 
+}
+
+.contact-image:hover {
+  opacity: 0.8; 
+}
