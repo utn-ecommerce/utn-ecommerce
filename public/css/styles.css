@@ -12,15 +12,38 @@ h2, h3, a, p {
 }
 /* CSS personalizado */
 .custom-card {
-  width: 400px; /* Ancho deseado */
-  height: 550px; /* Alto deseado */
+  width: 300px; /* Ancho deseado */
+  height: 500px; /* Alto deseado */
 }
 /* CSS personalizado */
-.custom-card-image {
-  width: 100%; /* Ancho deseado */
-  height: 100%; /* Alto deseado */
-  object-fit: cover; /* Para asegurarte de que la imagen se ajuste al contenedor sin deformarse */
+/* Primera tarjeta */
+.custom-card-image-1 {
+  width: 100%;
+  height: 200px; /* Ajusta la altura deseada */
+  object-fit: cover;
+  object-position: 30% 10%; /* Valores personalizados para mover la imagen */
 }
+
+/* Segunda tarjeta */
+.custom-card-image-2 {
+  width: 100%;
+  height: 200px; /* Ajusta la altura deseada */
+  object-fit: cover;
+  object-position: 50% 10%; /* Valores personalizados para mover la imagen */
+}
+
+/* Tercera tarjeta */
+.custom-card-image-3 {
+  width: 100%;
+  height: 200px; /* Ajusta la altura deseada */
+  object-fit: cover;
+  object-position: 70% 10%; /* Valores personalizados para mover la imagen */
+}
+.bg-crema {
+  background-color: #FFC0CB; /* Código hexadecimal para un tono rosa claro */
+}
+
+
 .contact-image {
   display: block;
   margin: 30px auto;
