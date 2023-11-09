@@ -1,13 +1,15 @@
-console.log("El script main.js se está ejecutando.");
+const productos = [
+    { nombre: 'Cell Active', precio: 6300 },
+    { nombre: 'Lidherma Food', precio: 7500 },
+    { nombre: 'Lidherma Exfoliante', precio: 7500 },
+    { nombre: 'Lidherma Hidrosomas', precio: 8500 },
+    { nombre: 'Laca Neblina Hidratante', precio: 8500 },
 
-const productosDestacados = [
-    { nombre: 'Skala Bomba', precio: 6020 },
-    { nombre: 'Skala Babosa', precio: 6020 },
-    { nombre: 'Skala Botanica', precio: 4000 },
-    { nombre: 'Skala Genetiqs', precio: 4500 }
+
+
 ];
 
-function crearProductoDestacadoHTML(producto, index) {
+function crearProductoHTML(producto, index) {
     return `
         <div class="col mb-5">
             <div class="card h-100">
@@ -27,8 +29,7 @@ function crearProductoDestacadoHTML(producto, index) {
         </div>
     `;
 }
-
-const productosDestacadosContainer = document.getElementById('productos-destacados-container');
-productosDestacados.forEach((producto, index) => {
-    productosDestacadosContainer.innerHTML += crearProductoDestacadoHTML(producto, index);
+const productosContainer = document.getElementById('productos-container');
+productos.forEach((producto, index) => {
+    productosContainer.innerHTML += crearProductoHTML(producto, index);
 });
