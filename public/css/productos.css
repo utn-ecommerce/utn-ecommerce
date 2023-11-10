@@ -45,8 +45,8 @@ h2, h3, a, p {
   opacity: 0.8; 
 }
 #carritoLista {
-  max-height: 300px; 
-  overflow-y: auto;
+  max-width: 6000px; 
+  overflow-x: auto; 
 }
 .carrito-item {
   display: flex;

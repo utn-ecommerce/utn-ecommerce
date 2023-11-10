@@ -25,25 +25,27 @@ function actualizarCarritoDropdown() {
 
     carrito.forEach(item => {
         const li = document.createElement('li');
-        li.classList.add('dropdown-item', 'carrito-item', 'd-flex', 'align-items-center');
+        li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
 
         const imagen = document.createElement('img');
         imagen.src = `../media/${item.nombre.toLowerCase().replace(/ /g, '-')}.jpg`;
         imagen.alt = item.nombre;
-        imagen.classList.add('carrito-imagen');
+        imagen.classList.add('carrito-imagen', 'img-fluid', 'mr-2');
 
         const nombre = document.createElement('span');
         nombre.innerText = item.nombre;
+        nombre.classList.add('carrito-nombre');
 
         const precio = document.createElement('span');
         precio.innerText = `$${item.precio} x ${item.cantidad}`;
+        precio.classList.add('carrito-precio');
 
         const divBotones = document.createElement('div');
-        divBotones.classList.add('d-flex', 'align-items-center');
+        divBotones.classList.add('btn-group');
 
         const botonRestar = document.createElement('button');
         botonRestar.innerText = '-';
-        botonRestar.classList.add('btn', 'btn-outline-dark', 'btn-sm', 'mx-2');
+        botonRestar.classList.add('btn', 'btn-outline-dark', 'btn-sm');
         botonRestar.addEventListener('click', () => restarDelCarrito(item.nombre));
 
         const botonSumar = document.createElement('button');
@@ -51,15 +53,10 @@ function actualizarCarritoDropdown() {
         botonSumar.classList.add('btn', 'btn-outline-dark', 'btn-sm');
         botonSumar.addEventListener('click', () => agregarAlCarritoDesdeDropdown(item.nombre));
 
-        const botonComprar = document.createElement('button');
-        botonComprar.innerText = 'Comprar';
-        botonComprar.classList.add('btn', 'btn-success', 'btn-sm', 'mx-2');
-        botonComprar.addEventListener('click', () => comprarCarrito());
-
         divBotones.appendChild(botonRestar);
         divBotones.appendChild(botonSumar);
 
-        li.appendChild(imagen);
+        li.appendChild(imagen); 
         li.appendChild(nombre);
         li.appendChild(precio);
         li.appendChild(divBotones);
@@ -67,17 +64,45 @@ function actualizarCarritoDropdown() {
         carritoLista.appendChild(li);
     });
 
-    const totalContainer = document.getElementById('total-container');
-    totalContainer.textContent = `Total: $${calcularTotal()}`;
+    const totalContainer = document.createElement('div');
+    totalContainer.classList.add('text-end', 'mt-3');
+
+    const strong = document.createElement('strong');
+    strong.innerText = 'Total: ';
+
+    const totalSpan = document.createElement('span');
+    totalSpan.id = 'total-container';
+    totalSpan.innerText = calcularTotal();
+
+    const comprarButton = document.createElement('button');
+    comprarButton.innerText = 'Comprar';
+    comprarButton.classList.add('btn', 'btn-success', 'btn-sm');
+    comprarButton.addEventListener('click', procesarCompra);
+
+    totalContainer.appendChild(strong);
+    totalContainer.appendChild(totalSpan);
+    totalContainer.appendChild(comprarButton);
+
+    carritoLista.appendChild(totalContainer);
+
+    carritoLista.style.maxHeight = '300px'; 
+}
+function procesarCompra() {
+    if (carrito.length > 0) {
+        $('#modalCompraExitosa').modal('show');
+        
+        carrito = [];
+        
+        actualizarContadorCarrito();
+        actualizarCarritoDropdown();
+    } else {
+        $('#modalCarritoVacio').modal('show');
+    }
 }
 
-function comprarCarrito() {
-    // Agrega aquí la lógica para completar la compra, por ejemplo, enviar la información al servidor, etc.
-    alert('¡Compra realizada con éxito!');
-    carrito = []; // Vaciar el carrito después de la compra
-    actualizarContadorCarrito();
+document.addEventListener('DOMContentLoaded', () => {
     actualizarCarritoDropdown();
-}
+});
 
 function restarDelCarrito(nombre) {
     const productoEnCarrito = carrito.find(item => item.nombre === nombre);
@@ -106,15 +131,3 @@ function calcularTotal() {
     });
     return total;
 }
-
-
-// Actualizar el carritoDropdown al cargar la página
-actualizarCarritoDropdown();
-
-const carritoDropdown = document.querySelector('.dropdown-menu');
-carritoDropdown.classList.add('dropdown-menu-end');
-
-document.addEventListener('DOMContentLoaded', () => {
-    const totalContainer = document.getElementById('total-container');
-    totalContainer.textContent = `$${calcularTotal()}`;
-});

@@ -1,5 +1,3 @@
-// ...
-
 function agregarAlCarritoDesdeDestacados(index) {
     const producto = productosDestacados[index];
     const productoEnCarrito = carrito.find(item => item.nombre === producto.nombre);
@@ -13,5 +11,3 @@ function agregarAlCarritoDesdeDestacados(index) {
     actualizarContadorCarrito();
     actualizarCarritoDropdown();
 }
-
-// ...
