@@ -1,35 +1,51 @@
 const productos = [
-    { nombre: 'Cell Active', precio: 6300 },
-    { nombre: 'Lidherma Food', precio: 7500 },
-    { nombre: 'Lidherma Exfoliante', precio: 7500 },
-    { nombre: 'Lidherma Hidrosomas', precio: 8500 },
-    { nombre: 'Laca Neblina Hidratante', precio: 8500 },
-
-
-
+    {
+        id: 1,
+        productName: "Cell Active",
+        price: 6300,
+        quanty: 1,
+        img: "../media/cell-active.jpg",
+    },
+    {
+        id: 2,
+        productName: "Lidherma Food",
+        price: 7500,
+        quanty: 1,
+        img: "../media/lidherma-food.jpg",
+    },
+    {
+        id: 3,
+        productName: "Lidherma Exfoliante",
+        price: 7500,
+        quanty: 1,
+        img: "../media/lidherma-exfoliante.jpg",
+    },
+    {
+         id: 4,
+         productName: "Lidherma Hidrosomas",
+         price: 8500,
+         quanty: 1,
+         img: "../media/lidherma-hidrosomas.jpg",
+    },
+    {
+        id: 5,
+        productName: "Laca Neblina Hidratante",
+        price: 8500,
+        quanty: 1,
+        img: "../media/laca-neblina-hidratante.jpg",
+    },
+    {
+        id: 6,
+        productName: "Renovage Corporal",
+        price: 6500,
+        quanty: 1,
+        img: "../media/renovage-corporal.jpg",
+    },
+    {
+        id: 7,
+        productName: "Vita Shield Ageless",
+        price: 6800,
+        quanty: 1,
+        img: "../media/vita-shield-ageless-complex.png",
+    },
 ];
-
-function crearProductoHTML(producto, index) {
-    return `
-        <div class="col mb-5">
-            <div class="card h-100">
-                <img class="card-img-top" src="../media/${producto.nombre.toLowerCase().replace(/ /g, '-')}.jpg" alt="${producto.nombre}" />
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <h5 class="fw-bolder">${producto.nombre}</h5>
-                        $${producto.precio}
-                    </div>
-                </div>
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center">
-                        <button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(${index})">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
-const productosContainer = document.getElementById('productos-container');
-productos.forEach((producto, index) => {
-    productosContainer.innerHTML += crearProductoHTML(producto, index);
-});
