@@ -51,6 +51,11 @@ function actualizarCarritoDropdown() {
         botonSumar.classList.add('btn', 'btn-outline-dark', 'btn-sm');
         botonSumar.addEventListener('click', () => agregarAlCarritoDesdeDropdown(item.nombre));
 
+        const botonComprar = document.createElement('button');
+        botonComprar.innerText = 'Comprar';
+        botonComprar.classList.add('btn', 'btn-success', 'btn-sm', 'mx-2');
+        botonComprar.addEventListener('click', () => comprarCarrito());
+
         divBotones.appendChild(botonRestar);
         divBotones.appendChild(botonSumar);
 
@@ -66,6 +71,13 @@ function actualizarCarritoDropdown() {
     totalContainer.textContent = `Total: $${calcularTotal()}`;
 }
 
+function comprarCarrito() {
+    // Agrega aquí la lógica para completar la compra, por ejemplo, enviar la información al servidor, etc.
+    alert('¡Compra realizada con éxito!');
+    carrito = []; // Vaciar el carrito después de la compra
+    actualizarContadorCarrito();
+    actualizarCarritoDropdown();
+}
 
 function restarDelCarrito(nombre) {
     const productoEnCarrito = carrito.find(item => item.nombre === nombre);
