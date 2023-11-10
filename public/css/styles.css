@@ -44,3 +44,11 @@ h2, h3, a, p {
 .contact-image:hover {
   opacity: 0.8; 
 }
+/* Estilo para h3 titulo "nosotros.html" */
+.equipo-titulo {
+  color: #000000;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;  /* Añadir centrado de texto */
+  margin-top: 1em; 
+}
