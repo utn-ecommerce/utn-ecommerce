@@ -39,6 +39,7 @@ ul {
     padding: 1em;
 }
 
+
 .contact-form {
     background: #222222;
 }
@@ -88,7 +89,7 @@ ul {
     outline: 0;
 }
 
-/* CONTACT INFO */
+/* Informacion de contacto*/
 .contact-info {
     background: #000;
 }
@@ -98,7 +99,7 @@ ul {
     margin: 0 0 1rem 0;
 }
 
-/* LARGE SIZE */
+/* Tamaño y largo */
 @media(min-width: 700px) {
     body {
         padding: 0 4em;
