@@ -19,7 +19,7 @@ const servicios = [
     }
 ];
 
-function crearServicioHTML(servicio,index) {
+function crearServicioHTML(servicio) {
     return `
         <div class="col mb-5">
             <div class="card h-100">
@@ -32,7 +32,7 @@ function crearServicioHTML(servicio,index) {
                 </div>
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center">
-                        <button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(${index})">Agregar al carrito</button>
+                    <a href="/contacto.html" class="btn btn-outline-dark mt-auto">Reservar sesión</a>
                     </div>
                 </div>
             </div>

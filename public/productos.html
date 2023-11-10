@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"></script>
     <link rel="stylesheet" href="css/productos.css">
     <title>Productos</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg bg-pastel-crema">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../public/index.html">Perricentro-Spa</a>
+            <a class="navbar-brand" href="/index.html">Perricentro-Spa</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="../public/productos.html">Productos</a>
-                    <a class="nav-link" href="../public/servicios.html">Servicios</a>
-                    <a class="nav-link" href="../public/nosotros.html">Nosotros</a>
-                    <a class="nav-link" href="../public/contacto.html">Contacto</a>
-                    <a class="nav-link" href="../public/carrito.html">Carrito</a>
+                    <a class="nav-link active" aria-current="page" href="/productos.html">Productos</a>
+                    <a class="nav-link" href="/servicios.html">Servicios</a>
+                    <a class="nav-link" href="/nosotros.html">Nosotros</a>
+                    <a class="nav-link" href="/contacto.html">Contacto</a>
                 </div>
             </div>
-            <form class="d-flex">
-                <button class="btn btn-outline-dark ver-carrito-btn" type="button" data-bs-toggle="modal" data-bs-target="#carrito-modal">
-                    <i class="bi-cart-fill me-1"></i>
+            <div class="dropdown flex-shrink-0 ml-auto">
+                <button class="btn btn-outline-dark dropdown-toggle" type="button" id="carritoDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     Carrito
                     <span class="badge bg-dark text-white ms-1 rounded-pill" id="contador-carrito">0</span>
                 </button>
-                
-            </form>
-        </div>
+                <ul class="dropdown-menu" aria-labelledby="carritoDropdown" id="carritoLista">
+                </ul>
+
+            </div>
     </nav>
+    <div class="modal fade" id="modalCompraExitosa" tabindex="-1" role="dialog"
+        aria-labelledby="modalCompraExitosaLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCompraExitosaLabel">Compra Exitosa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¡Gracias por tu compra! Tu pedido ha sido procesado con éxito.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalCarritoVacio" tabindex="-1" role="dialog" aria-labelledby="modalCarritoVacioLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCarritoVacioLabel">Carrito Vacío</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    El carrito está vacío. Agrega productos antes de comprar.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
@@ -43,8 +85,14 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="./js/productos.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./js/productos.js"></script>
+    <script src="./js/carrito.js"></script>
+
+
 </body>
+
 </html>
