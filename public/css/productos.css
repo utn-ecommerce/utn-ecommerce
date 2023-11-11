@@ -45,25 +45,12 @@ h2, h3, a, p {
   opacity: 0.8; 
 }
 #carritoLista {
-  max-width: 6000px; 
-  overflow-x: auto; 
-}
-.carrito-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px;
-  border-bottom: 1px solid #ccc; 
+  max-height: 300px;
+  overflow-y: auto;
 }
 .carrito-imagen {
-  max-width: 30px; 
+  max-width: 100px; 
   margin-right: 10px;
-}
-.carrito-contenido {
-  flex-grow: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 

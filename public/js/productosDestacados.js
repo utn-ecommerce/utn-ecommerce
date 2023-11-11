@@ -40,3 +40,8 @@ productosDestacados.forEach((producto, index) => {
 });
 
 productosDestacadosContainer.appendChild(rowDestacados);
+
+function agregarAlCarritoDesdeDestacados(index) {
+    const producto = productosDestacados[index];
+    agregarAlCarritoDesdeLista(producto, productosDestacados);
+}

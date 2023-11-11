@@ -30,7 +30,7 @@ function crearProductoHTML(producto, index) {
                 </div>
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center">
-                        <button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(${index})">Agregar al carrito</button>
+                        <button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarritoDesdeProductos(${index})">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -52,3 +52,8 @@ productos.forEach((producto, index) => {
 });
 
 productosContainer.appendChild(row);
+
+function agregarAlCarritoDesdeProductos(index) {
+    const producto = productos[index];
+    agregarAlCarritoDesdeLista(producto);
+}
